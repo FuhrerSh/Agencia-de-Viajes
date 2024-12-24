@@ -1,0 +1,112 @@
+{%extends 'base.html'%}
+{%block head%}
+{{super()}}
+    <link rel="stylesheet" href="{{url_for('static',filename='CSS/register.css')}}">
+{%endblock%}
+{%block title%} Registro {%endblock%}
+<body>
+
+    {%block header%}
+        <h1>Registro de Usuario</h1>
+    {%endblock%}
+    {%block content%}
+        <main class="main">
+            <form class="form" id="userForm" action="{{url_for('user_register')}}" method="post">
+                <div class="form-group">
+                    <label class="form__group-label" for="userType">Tipo de Usuario</label>
+                    <select class="form__group-selection" id="userType" name="userType" required>
+                        <option value="">Seleccione</option>
+                        <option value="comun">Usuario Común</option>
+                        <option value="corporativo">Cliente Corporativo</option>
+                    </select>
+                </div>
+
+                <div id="commonFields" style="display: none;">
+                    <div class="form-group">
+                        <label class="form__group-label" for="firstName">Nombre</label>
+                        <input class="form__group-input"type="text" id="firstName" name="firstName">
+                    </div>
+                    <div class="form-group">
+                        <label class="form__group-label" for="lastName">Apellido</label>
+                        <input class="form__group-input"type="text" id="lastName" name="lastName">
+                    </div>
+                    <div class="form-group">
+                        <label class="form__group-label" for="idCard">Cédula de Identidad</label>
+                        <input class="form__group-input"type="text" id="idCard" name="idCard">
+                    </div>
+                    <div class="form-group">
+                        <label class="form__group-label" for="age">Edad</label>
+                        <input class="form__group-input"type="number" id="age" name="age">
+                    </div>
+                    <div class="form-group">
+                        <label class="form__group-label" for="company">Empresa donde trabaja</label>
+                        <input class="form__group-input"type="text" id="company" name="company">
+                    </div>
+                    <div class="form-group">
+                        <label class="form__group-label" for="workAddress">Dirección del trabajo</label>
+                        <input class="form__group-input"type="text" id="workAddress" name="workAddress">
+                    </div>
+                    <div class="form-group">
+                        <label class="form__group-label" for="officePhone">Teléfono de la oficina</label>
+                        <input class="form__group-input"type="tel" id="officePhone" name="officePhone">
+                    </div>
+                    <div class="form-group">
+                        <label class="form__group-label" for="homeAddress">Dirección de habitación</label>
+                        <input class="form__group-input"type="text" id="homeAddress" name="homeAddress">
+                    </div>
+                    <div class="form-group">
+                        <label class="form__group-label" for="homePhone">Teléfono de habitación</label>
+                        <input class="form__group-input"type="tel" id="homePhone" name="homePhone">
+                    </div>
+                    <div class="form-group">
+                        <label class="form__group-label" for="cellPhone">Celular</label>
+                        <input class="form__group-input"type="tel" id="cellPhone" name="cellPhone">
+                    </div>
+                    <div class="form-group">
+                        <label class="form__group-label" for="email">Email</label>
+                        <input class="form__group-input"type="email" id="email" name="email">
+                    </div>
+                    <!-- <div class="form-group">
+                        <label class="form__group-label" for="serviceMode">Modalidad de servicio</label>
+                        <select id="serviceMode" name="serviceMode">
+                            <option value="">Seleccione</option>
+                            <option value="privado">Privado</option>
+                            <option value="estadía">Estadía</option>
+                        </select>
+                    </div> -->
+                </div>
+
+                <div id="corporateFields" style="display: none;">
+                    <div class="form-group">
+                        <label class="form__group-label" for="corporateName">Nombre de la Empresa</label>
+                        <input class="form__group-input"type="text" id="corporateName" name="corporateName">
+                    </div>
+                    <div class="form-group">
+                        <label class="form__group-label" for="contactPerson">Persona de Contacto</label>
+                        <input class="form__group-input"type="text" id="contactPerson" name="contactPerson">
+                    </div>
+                    <div class="form-group">
+                        <label class="form__group-label" for="corporateAddress">Dirección</label>
+                        <input class="form__group-input"type="text" id="corporateAddress" name="corporateAddress">
+                    </div>
+                    <div class="form-group">
+                        <label class="form__group-label" for="corporatePhone">Teléfono</label>
+                        <input class="form__group-input"type="tel" id="corporatePhone" name="corporatePhone">
+                    </div>
+                    <div class="form-group">
+                        <label class="form__group-label" for="rif">RIF</label>
+                        <input class="form__group-input"type="text" id="rif" name="rif">
+                    </div>
+                    <div class="form-group">
+                        <label class="form__group-label" for="nit">NIT</label>
+                        <input class="form__group-input"type="text" id="nit" name="nit">
+                    </div>
+                </div>
+
+                <button class="send-button" type="submit">Enviar</button>
+            </form>
+        </main>
+        <script src="{{url_for('static',filename='js/script_registerUser.js')}}"></script>
+    {%endblock%}
+
+</html>
