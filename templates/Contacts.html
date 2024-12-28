@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {%extends 'base.html'%}
 {%block head%}
     {{super()}}
@@ -56,3 +57,63 @@
 <script src="{{url_for('static',filename='js/script_contacs.js')}}"></script>
 {%endblock%}
 </html>
+=======
+{%extends 'base.html'%}
+{%block head%}
+    {{super()}}
+    <link rel="stylesheet" href="{{url_for('static',filename='CSS/styles_contact.css')}}">
+{%endblock%}
+{%block title%} Sobre Nosotros {%endblock%}
+    {%block header%}
+        <h1>Bienvenido a Beyond Horizons</h1>
+        <nav>
+            <ul>
+                <li><a href="#" data-section="quienes-somos">Quiénes Somos</a></li>
+                <li><a href="#" data-section="servicios">Nuestros Servicios</a></li>
+                <li><a href="#" data-section="terminos">Términos y Condiciones</a></li>
+                <li><a href="#" data-section="contacto">Contáctanos</a></li>
+            </ul>
+        </nav>
+    {%endblock%}
+{%block content%}
+    <main>
+        <!-- Sección: Quiénes Somos -->
+        <section id="quienes-somos" class="section active">
+            <h2>Quiénes Somos</h2>
+            <p>Somos "Beyond Horizons" una empresa dedicada a ofrecer seguridad y un viaje maravilloso.</p>
+        </section>
+
+        <!-- Sección: Nuestros Servicios -->
+        <section id="servicios" class="section">
+            <h2>Nuestros Servicios</h2>
+            <ul>
+                <li>Consultoría personalizada</li>
+                <li>Desarrollo de software</li>
+                <li>Soporte técnico</li>
+            </ul>
+        </section>
+
+        <!-- Sección: Términos y Condiciones -->
+        <section id="terminos" class="section">
+            <h2>Términos y Condiciones</h2>
+            <p>Al utilizar nuestros servicios, aceptas los términos y condiciones establecidos en este sitio.</p>
+        </section>
+
+        <!-- Sección: Contáctanos -->
+        <section id="contacto" class="section">
+            <h2>Contáctanos</h2>
+            <p>Puedes comunicarte con nosotros a través de:</p>
+            <ul>
+                <li>Email: contacto@ejemplo.com</li>
+                <li>Teléfono: +123 456 7890</li>
+                <li>Dirección: Calle Falsa 123, Ciudad, País</li>
+            </ul>
+        </section>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
+    </footer>
+<script src="{{url_for('static',filename='js/script_contacs.js')}}"></script>
+{%endblock%}
+</html>
+>>>>>>> 17a5b48 (mejora en la estructura del back-end)

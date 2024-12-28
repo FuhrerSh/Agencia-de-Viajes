@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 body {
     font-family: Arial, sans-serif;
     margin: 0;
@@ -63,4 +64,71 @@ body {
 }
 .send-button:hover {
     background-color: #0056b3;
+=======
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+.header {
+    background-color: #007bff;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    
+}
+.main {
+    width: clamp(60vw,78vw,90vw);
+    margin: 20px auto;
+    background: transparent;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 2px 45px #0007;
+}
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+
+}
+.form-group {
+    margin-bottom: 15px;
+    width: 100%;
+}
+.form__group-label {
+    font-weight: bold;
+    display: block;
+    margin: auto;
+    margin-bottom: 5px;
+}
+.form__group-input, .form__group-selection {
+    width: 70%;
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    outline: none;
+    text-align: center;
+    font-weight: 700;
+}
+.form__group-input{
+    border-bottom: 4px solid #ddd ;
+}
+.send-button {
+    background-color: #007bff;
+    color: white;
+    border: none;
+    padding: 10px 15px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    width: clamp(76%,80%, 86%);
+    margin: auto;
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+.send-button:hover {
+    background-color: #0056b3;
+>>>>>>> 17a5b48 (mejora en la estructura del back-end)
 }

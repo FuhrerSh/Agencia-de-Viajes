@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {%extends 'base.html'%}
     {%block head%}
     {{super()}}
@@ -41,4 +42,49 @@
 <p>Agencia de viajes 2024. Todos los derechos reservados</p>
 </footer>
 <script src="{{url_for('static',filename='js/script.js')}}"></script>
+=======
+{%extends 'base.html'%}
+    {%block head%}
+    {{super()}}
+        <link rel="stylesheet" href="{{url_for('static',filename='CSS/style.css')}}">
+    {%endblock%}
+    {%block title%} Inicio de Sesion{%endblock%}
+    {%block nav%}
+    <nav class="nav">
+        <ul class="nav__ul">
+            <li class="nav__ul-link">
+                <h2>Beyond Horizons</h2>
+            </li>
+            <li class="nav__ul-link">
+                <a href="{{url_for('information')}}" class="link link--modify">Contactanos</a>
+            </li>
+        </ul>
+    </nav>
+    {%endblock%}
+    </header>
+    {%block content%}
+    <section class="flex">
+        <form  class="block__form-login" action="{{index}}" method="post">
+            <h2>Iniciar Sesión</h2>
+            <label class="form__login-label" for="email"> Email/Empresa</label>
+            <input class="block__form-input" type="email" id="email" placeholder="Ejemplo@email.com" name="correo" required>
+            <label class="form__login-label" for="key">Contraseña/NIT</label>
+            <input class="block__form-input password" type="password" id="key" name="password" placeholder="********" required>
+            <button class="block__form-button">Entrar</button>
+        </form>
+
+        <section class="block__register">
+            <h2>¿No te has registrado?</h2>
+            <p>
+                Tu seguridad es nuestra prioridad. Al registrarte en nuestra agencia de viejes. podrás viajar con total tranquilidad, sabiendo que cuentas con nuestro respaldo en todo momento. Desde la reserva de vuelo hasta la asistencia en destino, nuestro equipo estará contigo en cada paso del camino.
+                <a href="{{url_for('user_register')}}" class="register">¡Registrate ahora y descubre la diferencia de viajar con los mejores!</a>
+            </p>
+        </section>
+    </section>
+    
+<footer>
+<p>Agencia de viajes 2024. Todos los derechos reservados</p>
+</footer>
+<script src="{{url_for('static',filename='js/script.js')}}"></script>
+>>>>>>> 17a5b48 (mejora en la estructura del back-end)
 {%endblock%}

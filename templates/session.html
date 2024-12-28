@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 {%extends 'base.html'%}
 {%block head%}
     {{super()}}
@@ -78,4 +79,86 @@
         <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
     </footer>
 
+=======
+{%extends 'base.html'%}
+{%block head%}
+    {{super()}}
+    <link rel="stylesheet" href="{{url_for('static',filename='CSS/style_access.css')}}">
+{%endblock%}
+{%block title%} Sala Principal {%endblock%}
+
+{% block header %}
+    {% block nav %}
+    <ul class="nav__list">
+        <li class="list__item">
+            <div class="container__img">
+                <h3><a href="{{url_for('logout')}}">Salir</a></h3>
+                <img src="{{url_for('static',filename='Media/out.png')}}" alt="">
+            </div>
+        </li>
+        <li class="list__item">
+            <div class="container__img">
+                <h3>{{user}}</h3>
+                <img src="{{url_for('static',filename='Media/perfil.png')}}" alt="">
+            </div>
+        </li>
+    </ul>
+    {% endblock %}
+{%endblock%}
+{%block content%}
+
+    <main class="main">
+        <form action="{{ url_for('lobby') }}" class="form" method="post" class="main__form">
+            <div class="form__container">
+                <label class="container-label" for="estado_zona">Origen</label>
+                <select class="container__select" name="estado_zona">
+                    <option>Selecione Origen</option>
+                    <option value="Barcelona">Barcelona</option>
+                    <option value="Caracas">Caracas</option>
+                    <option value="Barinas">Barinas</option>
+                    <option value="Coro">Coro</option>
+                    <option value="Cumana">Cumana</option>
+                    <option value="Merida">Merida</option>
+                    <option value="Los Roques">Los Roques</option>
+                    <option value="Maracaibo">Maracaibo</option>
+                    <option value="Canaima">Canaima</option>
+                </select>
+            </div>
+            <div class="form__container">
+                <label class="container-label" for="destino">Destino</label>
+                <select class="container__select" name="destino" id="destino">
+                    <option>Selecione Destino</option>
+                    <option value="Barcelona">Barcelona</option>
+                    <option value="Caracas">Caracas</option>
+                    <option value="Barinas">Barinas</option>
+                    <option value="Coro">Coro</option>
+                    <option value="Cumana">Cumana</option>
+                    <option value="Merida">Merida</option>
+                    <option value="Los Roques">Los Roques</option>
+                    <option value="Maracaibo">Maracaibo</option>
+                    <option value="Canaima">Canaima</option>
+                </select>
+            </div>
+            <div class="form__container">
+                <label class="container-label" for="vehiculo">Modo De Transporte</label>
+                <select class="container__select" name="vehiculo" id="vehiculo">
+                    <option>Selecione vehiculo</option>
+                    <option value="taxi">Taxi</option>
+                    <option value="limusina">Limusina</option>
+                    <option value="autobus">autobuses</option>
+                </select>
+            </div>
+            <div class="form__container">
+                <label class="container-label" for="fecha_salida">Fecha De Salida</label>
+                <input type="date" name="fecha_salida" id="fecha_salida">
+            </div>
+            <button class="button">Enviar</button>
+        </form>
+        <div class="flash-msg">{{msg}}</div>
+    </main>
+    <footer class="footer">
+        <p>&copy; 2024 Mi Página Web. Todos los derechos reservados.</p>
+    </footer>
+
+>>>>>>> 17a5b48 (mejora en la estructura del back-end)
 {%endblock%}
